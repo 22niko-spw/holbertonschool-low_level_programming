@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+/**
+ * main - Point d'entrée
+ *
+ * Description: Affiche l'alphabet en minuscules.
+ * Return: Toujours 0 (Succès)
+ */
+int main(void)
+{
+	char letter;
+
+	for (letter = 'a' ; letter <= 'z' ; letter++)
+	{
+		if (letter != 'q' && letter != 'e')
+		{
+			putchar (letter);
+		}
+	}
+	putchar('\n');
+
+	return (0);
+}
