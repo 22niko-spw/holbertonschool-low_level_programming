@@ -2,10 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * Main negative
- * If neagtive
- * return 0 
- **/
+ * main - entry point
+ * return 0
+ */
 
 int main(void)
 {
