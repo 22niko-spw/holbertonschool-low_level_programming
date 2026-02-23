@@ -9,7 +9,7 @@
  * Return: Always 0 (Success)
  */
 
- int main(void)
+int main(void)
 {
 	int n;
 	int lastd;
@@ -22,7 +22,7 @@
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, lastd);
 	}
-	
+
 	if (lastd == 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, lastd);
