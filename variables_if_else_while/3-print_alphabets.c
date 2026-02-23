@@ -4,7 +4,7 @@
 /**
  * main - Point d'entrée
  *
- * Description: Affiche l'alphabet en minuscules.
+ * Description: Affiche l'alphabet en minuscules et majuscules.
  * Return: Toujours 0 (Succès)
  */
 int main(void)
