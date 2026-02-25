@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle followed by a new line
- * @size: the size of the triangle
+ * print_triangle - prints a triangle, right-aligned
+ * @size: size of the triangle
  */
 void print_triangle(int size)
 {
-	int row, col;
+	int i, j;
 
 	if (size <= 0)
 	{
@@ -14,9 +14,13 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (row = 1; row <= size; row++)
+		for (i = 1; i <= size; i++)
 		{
-			for (col = 1; col <= row; col++)
+			for (j = 1; j <= (size - i); j++)
+			{
+				_putchar(' ');
+			}
+			for (j = 1; j <= i; j++)
 			{
 				_putchar('#');
 			}
