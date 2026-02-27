@@ -21,5 +21,14 @@ int main(void)
 	{
 		printf("Bye!\n");
 	}
+	else if (choice >= 1 && choice <= 4)
+	{
+		printf("add a number\n");
+	}
+	else
+	{
+		printf("Invalid Choice\n");
+	}
 		return (0);
+
 }
