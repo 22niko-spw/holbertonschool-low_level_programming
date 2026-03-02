@@ -25,6 +25,17 @@ double soustraction(double a, double b)
 {
 	return (a - b);
 }
+/**
+ * multiplication -  Multiplier deux nombres.
+ * @a: Le premier nombre.
+ * @b: Le deuxième nombre.
+ *
+ * Return: La multiplication de @a et @b.
+ */
+double multiplication(double a, double b)
+{
+	return (a * b);
+}
 
 /**
  * main - Entry point for the calculator program.
@@ -58,6 +69,8 @@ int main(void)
 			resultat = addition(num1, num2);
 		else if (choice == 2)
 			resultat = soustraction(num1, num2);
+		else if (choice == 3)
+			resultat = multiplication(num1, num2);
 	}
 		printf("Result; %.2f\n", resultat);
 
