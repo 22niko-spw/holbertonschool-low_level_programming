@@ -1,15 +1,12 @@
 #include<stdio.h>
-/**
- * main - Entry point for the calculator program.
- * * Return: 0 if the program exits successfully,
- * otherwise a non-zero error code.
- */
+#include <stdlib.h>
+#include <string.h>
 
 
 /**
- * addition - Additionne deux nombres réels.
- * @a: Le premier nombre à additionner.
- * @b: Le deuxième nombre à additionner.
+ * addition - Additionne deux nombres.
+ * @a: Le premier nombre.
+ * @b: Le deuxième nombre.
  *
  * Return: La somme de @a et @b.
  */
@@ -17,6 +14,23 @@ double addition(double a, double b)
 {
 	return (a + b);
 }
+/**
+ * soustraction -  Soustraire deux nombres.
+ * @a: Le premier nombre.
+ * @b: Le deuxième nombre.
+ *
+ * Return: La différence de @a et @b.
+ */
+double soustraction(double a, double b)
+{
+	return (a - b);
+}
+
+/**
+ * main - Entry point for the calculator program.
+ * * Return: 0 if the program exits successfully,
+ * otherwise a non-zero error code.
+ */
 int main(void)
 {
 	int choice = -1;
@@ -33,7 +47,7 @@ int main(void)
 	{
 		printf("Bye!\n");
 	}
-	else if (choice >= 1 && choice <= 4)
+	if (choice >= 1 && choice <= 4)
 	{
 		printf("Enter first number\n");
 		scanf("%lf", &num1);
@@ -42,6 +56,8 @@ int main(void)
 
 		if (choice == 1)
 			resultat = addition(num1, num2);
+		else if (choice == 2)
+			resultat = soustraction(num1, num2);
 	}
 		printf("Result; %.2f\n", resultat);
 
