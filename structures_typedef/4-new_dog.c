@@ -1,44 +1,54 @@
 #include "dog.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * new_dog - crée un nouveau chien (allocation dynamique).
+ * @name: nom du chien.
+ * @age: âge du chien.
+ * @owner: propriétaire du chien.
  *
- * Return: pointer to the new dog, or NULL if it fails
+ * Return: pointeur vers la nouvelle structure dog_t, ou NULL si échec.
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int i = 0;
+	unsigned int size = 0;
+	char *namecp;
+	char *ownercp;
 	dog_t *d = malloc(sizeof(dog_t));
 
 	if (d == NULL)
 		return (NULL);
-
-	d->name = malloc(strlen(name) + 1);
-	if (d->name == NULL)
+	while (name[size] != '\0')
+		size++;
+	namecp = malloc((size + 1) * sizeof(char));
+	if (namecp == NULL)
+		return (NULL);
+	while (name[i] != '\0')
 	{
+		namecp[i] = name[i];
+		i++;
+	}
+	namecp[i] = '\0';
+	d->name = namecp;
+	size = 0;
+	i = 0;
+	while (owner[size] != '\0')
+		size++;
+	ownercp = malloc((size + 1) * sizeof(char));
+	if (ownercp == NULL)
+	{
+		free(namecp);
 		free(d);
 		return (NULL);
 	}
-
-	strcpy(d->name, name);
-
-	d->owner = malloc(strlen(owner) + 1);
-	if (d->owner == NULL)
+	while (owner[i] != '\0')
 	{
-		free(d->name);
-		free(d);
-		return (NULL);
+		ownercp[i] = owner[i];
+		i++;
 	}
-
-	strcpy(d->owner, owner);
-
+	ownercp[i] = '\0';
+	d->owner = ownercp;
 	d->age = age;
 	return (d);
-
 }
