@@ -50,6 +50,9 @@ void print_all(const char * const format, ...)
     		sep = ", ";
     		break;
 
+			default: 
+			break;
+
 		}
 		p++;
 
