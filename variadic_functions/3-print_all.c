@@ -2,7 +2,6 @@
 /**
  * print_all - prints anything based on a format string
  * @format: list of types of arguments passed to the function
- * c: char, i: integer, f: float, s: char *
  *
  * Return: void
  */
