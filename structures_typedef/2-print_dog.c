@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * 
+ * print_dog - affiche une variable de type struct dog
+ * @d: pointeur vers la struct dog à afficher
  */
 void print_dog(struct dog *d)
 {
