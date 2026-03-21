@@ -7,7 +7,7 @@
  *
  * Return: natural square root of n, or -1 if none exists
  */
-static int sqrt_helper(int n, int guess)
+int sqrt_helper(int n, int guess)
 {
 	if (guess * guess == n)
 		return (guess);
