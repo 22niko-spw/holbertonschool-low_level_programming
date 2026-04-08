@@ -14,20 +14,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	/* 1. Ouvrir le fichier en mode écriture seule et ajout (append) */
-	/* Note: On n'utilise pas O_CREAT ici */
+	/* Ouverture en mode écriture seule et ajout (append) */
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
 
-	/* 2. Si text_content est NULL, on a juste besoin de savoir si le fichier existe */
 	if (text_content != NULL)
 	{
-		/* Calcul de la longueur de la chaîne */
 		while (text_content[len])
 			len++;
 
-		/* Écriture à la fin du fichier */
 		n_wrote = write(fd, text_content, len);
 		if (n_wrote == -1 || n_wrote != len)
 		{
